@@ -1,7 +1,7 @@
-const { Thoughts, User } = require('../models');
+const { Thoughts, User, } = require('../models');
 
 const thoughtsController = {
-    addThought({ params, body }, res) {
+    addThought ({ params, body }, res) {
         console.log(params);
         Thoughts.create(body)
         .then(({ _id }) => {
@@ -21,11 +21,26 @@ const thoughtsController = {
         })
         .catch(err => res.json(err));
     },
-    getAllThoughts(req, res) {
+    getAllThoughts (req, res) {
         Thoughts.find({})
         .populate({
-            path: 'thoughts'
+            path: 'reactions',
+            select: '-__v'
         })
+        .select('-__v')
+        .then(dbUserData => res.json(dbUserData))
+        .catch(err => {
+            console.log(err)
+            res.sendStatus(400).json(err);
+        })
+    },
+    getThoughtById ({ params }, res) {
+        Thoughts.findOne({ _id: params.id })
+        .populate({
+            path: 'reactions',
+            select: '-__v'
+        })
+
     },
 
 
