@@ -12,5 +12,4 @@ const {
 router
     .route('/').get(getAllThoughts);
 
-router
-    .route()
+module.exports = router;
