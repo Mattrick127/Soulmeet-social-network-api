@@ -1,7 +1,7 @@
 # Soulmeet-social-network-api
 
 ## Description
-
+This Api for a social network web application will be able to look up a user's friends, thoughts, and reactions to those thoughts!
 
 ## Table of Contents
 
