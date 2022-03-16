@@ -1,7 +1,7 @@
 # Soulmeet-social-network-api
 
 ## Description
-
+This Api for a social network web application will be able to look up a user's friends, thoughts, and reactions to those thoughts!
 
 ## Table of Contents
 
@@ -15,6 +15,10 @@
 Go to my github and undex Soulmeet-social-network-api git clone it to your local.
 
 ## Usage
+
+
+https://user-images.githubusercontent.com/74633125/158105526-76e63091-be03-4907-90ad-d5b8ef4d06da.mp4
+
 
 
 
